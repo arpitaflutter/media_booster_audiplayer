@@ -13,24 +13,40 @@ class _audio_screenState extends State<audio_screen> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
-        body: Column(
-          children: [
-            Container(
-              height: 60,width: double.infinity,
-              margin: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+        body: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              Container(
+                height: 60,width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.search),
+                      SizedBox(width: 15,),
+                      Text("Search",style: TextStyle(fontSize: 20,color: Colors.black),)
+                    ],
+                  ),
+                ),
               ),
-              child: Row(
+              SizedBox(height: 20),
+              Row(
                 children: [
-                  Icon(Icons.search),
-                  SizedBox(width: 15,),
-                  Text("Search")
+                  Text("New Music Alert",style: TextStyle(color: Colors.white,fontSize: 20)),
                 ],
               ),
-            ),
-          ],
+              ListView.builder(itemBuilder: (context, index) {
+
+              },
+                itemCount: ,
+              )
+            ],
+          ),
         ),
       ),
     );
